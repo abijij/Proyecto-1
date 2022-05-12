@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package sistema;
 
 import java.sql.ResultSet;
@@ -6,7 +9,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
-
+/**
+ *
+ * @author HP
+ */
 public class Login extends javax.swing.JFrame {
 
     /**
