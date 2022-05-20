@@ -4,6 +4,8 @@
  */
 package sistema;
 
+
+
 /**
  *
  * @author HP
@@ -15,6 +17,7 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**
@@ -26,21 +29,142 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
+        PnlMenu = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        BtnCrud = new javax.swing.JButton();
+        BtnReportes = new javax.swing.JButton();
+        BtnEstadisticas = new javax.swing.JButton();
+        BtnMenu = new javax.swing.JButton();
+        BtnSalir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PnlMenu.setBackground(new java.awt.Color(255, 255, 255));
+        PnlMenu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        PnlMenu.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/gear_96px.png"))); // NOI18N
+        jLabel1.setFocusable(false);
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+
+        BtnCrud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/data_center_64px.png"))); // NOI18N
+        BtnCrud.setBorder(null);
+        BtnCrud.setContentAreaFilled(false);
+        BtnCrud.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BtnCrud.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnCrudActionPerformed(evt);
+            }
+        });
+
+        BtnReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/business_report_64px.png"))); // NOI18N
+        BtnReportes.setBorder(null);
+        BtnReportes.setContentAreaFilled(false);
+        BtnReportes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        BtnEstadisticas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/line_chart_64px.png"))); // NOI18N
+        BtnEstadisticas.setBorder(null);
+        BtnEstadisticas.setContentAreaFilled(false);
+        BtnEstadisticas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        javax.swing.GroupLayout PnlMenuLayout = new javax.swing.GroupLayout(PnlMenu);
+        PnlMenu.setLayout(PnlMenuLayout);
+        PnlMenuLayout.setHorizontalGroup(
+            PnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlMenuLayout.createSequentialGroup()
+                .addGroup(PnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMenuLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnCrud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PnlMenuLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PnlMenuLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BtnEstadisticas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMenuLayout.createSequentialGroup()
+                .addGap(0, 66, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(62, 62, 62))
+        );
+        PnlMenuLayout.setVerticalGroup(
+            PnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BtnCrud, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BtnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BtnEstadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(88, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(PnlMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 230, -1));
+
+        BtnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Menu_64px.png"))); // NOI18N
+        BtnMenu.setContentAreaFilled(false);
+        BtnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.WAIT_CURSOR));
+        BtnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnMenuActionPerformed(evt);
+            }
+        });
+        jPanel2.add(BtnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 5, 126, 60));
+
+        BtnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/exit_sign_64px.png"))); // NOI18N
+        BtnSalir.setToolTipText("");
+        BtnSalir.setBorder(null);
+        BtnSalir.setContentAreaFilled(false);
+        BtnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnSalirActionPerformed(evt);
+            }
+        });
+        jPanel2.add(BtnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, 83, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BtnCrudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCrudActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnCrudActionPerformed
+
+    private void BtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalirActionPerformed
+      System.exit(0);
+    }//GEN-LAST:event_BtnSalirActionPerformed
+
+    private void BtnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMenuActionPerformed
+    int posicion = BtnMenu.getX();
+     
+        if(posicion > 5){
+            Animacion.Animacion.mover_izquierda(211, 5, 2, 2, BtnMenu);
+            Animacion.Animacion.mover_izquierda(5, -230, 2, 2, PnlMenu);
+        }else{
+            Animacion.Animacion.mover_derecha(5, 210, 2, 2, BtnMenu);
+            Animacion.Animacion.mover_derecha(-230, 5, 2, 2, PnlMenu);
+        
+    }
+    }//GEN-LAST:event_BtnMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +202,13 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnCrud;
+    private javax.swing.JButton BtnEstadisticas;
+    private javax.swing.JButton BtnMenu;
+    private javax.swing.JButton BtnReportes;
+    private javax.swing.JButton BtnSalir;
+    private javax.swing.JPanel PnlMenu;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -118,7 +118,7 @@ public class Login extends javax.swing.JFrame {
             Statement st = conectar.Conectar();
             try
             {
-                ResultSet rs = st.executeQuery("SELECT * FROM  tblUsuarios Where usuario="+usuario+"and clave="+pass+"");
+                ResultSet rs = st.executeQuery("SELECT * FROM  tblUsuarios Where usuario='"+usuario+"'and clave='"+pass+"'");
                 rs.last();
                 int encontrado = rs.getRow();
                 if(encontrado == 1)
