@@ -67,27 +67,32 @@ public class Inicio extends javax.swing.JFrame {
         BtnReportes.setBorder(null);
         BtnReportes.setContentAreaFilled(false);
         BtnReportes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BtnReportes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnReportesActionPerformed(evt);
+            }
+        });
 
         BtnEstadisticas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/line_chart_64px.png"))); // NOI18N
         BtnEstadisticas.setBorder(null);
         BtnEstadisticas.setContentAreaFilled(false);
         BtnEstadisticas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BtnEstadisticas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEstadisticasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PnlMenuLayout = new javax.swing.GroupLayout(PnlMenu);
         PnlMenu.setLayout(PnlMenuLayout);
         PnlMenuLayout.setHorizontalGroup(
             PnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlMenuLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(PnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(BtnCrud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(PnlMenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(BtnReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(PnlMenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(BtnEstadisticas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(BtnCrud, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtnReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(BtnEstadisticas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMenuLayout.createSequentialGroup()
                 .addGap(0, 66, Short.MAX_VALUE)
@@ -146,7 +151,9 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnCrudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCrudActionPerformed
-        // TODO add your handling code here:
+                    Crud irC = new Crud();
+                    irC.setVisible(true); 
+                    hide();        // TODO add your handling code here:
     }//GEN-LAST:event_BtnCrudActionPerformed
 
     private void BtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSalirActionPerformed
@@ -165,6 +172,18 @@ public class Inicio extends javax.swing.JFrame {
         
     }
     }//GEN-LAST:event_BtnMenuActionPerformed
+
+    private void BtnReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReportesActionPerformed
+                    Generador_Reporte irG = new Generador_Reporte();
+                    irG.setVisible(true); 
+                    hide();       
+    }//GEN-LAST:event_BtnReportesActionPerformed
+
+    private void BtnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEstadisticasActionPerformed
+                   Grafica irGr = new Grafica();
+                    irGr.setVisible(true); 
+                    hide();
+    }//GEN-LAST:event_BtnEstadisticasActionPerformed
 
     /**
      * @param args the command line arguments
